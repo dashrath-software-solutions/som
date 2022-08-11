@@ -1,13 +1,14 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "type": "node",
-        "request": "launch",
-        "name": "Launch Program",
-        "program": "${workspaceFolder}\\bin\\www"
-      }
-    ],
+   "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.commit": true,
+    "**/node_modules": true
+   },
     "prettier.enable": true,
     "prettier.resolveGlobalModules": true,
     "eslint.enable": true,
