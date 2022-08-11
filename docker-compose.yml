@@ -1,6 +1,7 @@
 version: '3.*'
 services:
   slack_backend:
+    container_name: som-backend
     build:
       context: .
       target: BASE
