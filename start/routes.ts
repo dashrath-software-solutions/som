@@ -19,7 +19,9 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
+import logger from '../utils/Logger'
 
 Route.get('/', async () => {
+  logger.info('log')
   return { hello: 'world' }
 })
