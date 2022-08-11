@@ -1,0 +1,118 @@
+{
+  "name": "som",
+  "description": "Slack operations manager",
+  "author": {
+    "email": "dharmendrashah2002@yahoo.com",
+    "name": "dharmendra soni",
+    "url": "https://github.com/dharmendrasha"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/dharmendrasha/SOM",
+    "type": "GIT",
+    "directory": "https://github.com/dharmendrasha/SOM"
+  },
+  "bugs": {
+    "email": "dharmendrashah2002@yahoo.com",
+    "url": "https://github.com/dharmendrasha/SOM/issues"
+  },
+  "homepage": "https://github.com/dharmendrasha/SOM",
+  "readme": "https://github.com/dharmendrasha/SOM#readme",
+  "keywords": [
+    "slack",
+    "bot",
+    "manager",
+    "operations",
+    "engineers"
+  ],
+  "icon": "https://cdn.iconscout.com/icon/premium/png-256-thumb/applicant-1874716-1591030.png",
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "master",
+      "next",
+      "next-major",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ],
+    "repositoryUrl": "https://github.com/dharmendrasha/SOM/releases"
+  },
+  "publisher": "dharmendrashah2002@yahoo.com",
+  "contributors": [
+    "dharmendrashah2002@yahoo.com"
+  ],
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ace serve --watch",
+    "prebuild": "rimraf dist",
+    "debug": "node ace serve --watch --node-args='--inspect=0.0.0.0:9229'",
+    "build": "node ace build --production",
+    "start": "node server.js",
+    "lint": "eslint . --ext=.ts",
+    "format": "prettier --write .",
+    "eslint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "eslint:fix": "npm run eslint:check -- --fix",
+    "lint:all": "npm run eslint:check && npm run prettier:check",
+    "precommit": "lint-staged && npm run lint",
+    "prepare": "husky install",
+    "prettier:check": "prettier --check ./**/*.{ts,js,json,*rc}",
+    "prettier:write": "prettier --write ./**/*.{ts,js,json,*rc}",
+    "sort-package-json": "npx sort-package-json"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:adonis/typescriptApp",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error"
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "build"
+  ],
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
+  },
+  "devDependencies": {
+    "@adonisjs/assembler": "^5.8.1",
+    "@japa/preset-adonis": "^1.1.0",
+    "@japa/runner": "^2.0.9",
+    "adonis-preset-ts": "^2.1.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-adonis": "^2.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "pino-pretty": "^9.0.0",
+    "prettier": "^2.7.1",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "~4.6",
+    "youch": "^3.2.0",
+    "youch-terminal": "^2.1.4"
+  },
+  "dependencies": {
+    "@adonisjs/core": "^5.8.6",
+    "@adonisjs/repl": "^3.1.11",
+    "proxy-addr": "^2.0.7",
+    "source-map-support": "^0.5.21"
+  }
+}

@@ -1,0 +1,15 @@
+version: '3.*'
+services:
+  slack_backend:
+    build:
+      context: .
+      target: BASE
+      args:
+        - DEBUG_PORT=$DEBUG_PORT
+    ports:
+      - $PORT:$PORT
+      - $DEBUG_PORT:$DEBUG_PORT
+    volumes:
+      - .:/app
+    env_file:
+      - .env
