@@ -54,7 +54,7 @@
     "prebuild": "rimraf dist",
     "debug": "node ace serve --watch --node-args='--inspect=0.0.0.0:9229'",
     "build": "node ace build --production",
-    "start": "node server.js",
+    "start": "node build/server.js",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",
     "eslint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
