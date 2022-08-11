@@ -25,6 +25,10 @@
     "operations",
     "engineers"
   ],
+  "engines": {
+    "node": "18.7.*",
+    "npm": "8.5.*"
+  },
   "icon": "https://cdn.iconscout.com/icon/premium/png-256-thumb/applicant-1874716-1591030.png",
   "release": {
     "branches": [
@@ -54,7 +58,7 @@
     "prebuild": "rimraf dist",
     "debug": "node ace serve --watch --node-args='--inspect=0.0.0.0:9229'",
     "build": "node ace build --production",
-    "start": "node build/server.js",
+    "start": "cd build && npm ci --production && node server.js",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",
     "eslint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
