@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "3-add-ci-cd-pipeline" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "3-add-ci-cd-pipeline" ]
 
 env:
   CURRENT_TAG_REF: ${{ github.SHA }}
