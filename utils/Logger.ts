@@ -30,7 +30,6 @@ export const writeFile = () =>
     encoding: undefined,
     mode: 0o777,
   })
-
 const PinoLogger = Pino(
   {
     prettyPrint: {
