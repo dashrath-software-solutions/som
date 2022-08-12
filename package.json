@@ -26,8 +26,8 @@
     "engineers"
   ],
   "engines": {
-    "node": "18.7.*",
-    "npm": "8.5.*"
+    "node": "18.7.0",
+    "npm": "8.15.0"
   },
   "icon": "https://cdn.iconscout.com/icon/premium/png-256-thumb/applicant-1874716-1591030.png",
   "release": {
