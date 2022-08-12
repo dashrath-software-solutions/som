@@ -18,6 +18,8 @@
 |
 */
 
+import './routes/v1/api/slack'
+
 import Route from '@ioc:Adonis/Core/Route'
 import logger from '../utils/Logger'
 
