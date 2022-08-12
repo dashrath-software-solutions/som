@@ -4,6 +4,7 @@
  * Feel free to let us know via PR, if you find something broken in this contract
  * file.
  */
+import Env from '@ioc:Adonis/Core/Env'
 
 declare module '@ioc:Adonis/Core/Env' {
   /*
@@ -21,3 +22,17 @@ declare module '@ioc:Adonis/Core/Env' {
   type CustomTypes = typeof import('../env').default
   interface EnvTypes extends CustomTypes {}
 }
+
+/**
+ * Depending upon the database driver you are using, you must validate
+ * the environment variables defined.
+ *
+ * The following is an example for PostgreSQL.
+ */
+export default Env.rules({
+  PG_HOST: Env.schema.string({ format: 'host' }),
+  PG_PORT: Env.schema.number(),
+  PG_USER: Env.schema.string(),
+  PG_PASSWORD: Env.schema.string.optional(),
+  PG_DB_NAME: Env.schema.string(),
+})
