@@ -46,6 +46,7 @@ const logger = new Logger(
     name: 'sop',
     level: 'trace',
     enabled: true,
+    stream: writeFile(),
   },
   PinoLogger
 )
