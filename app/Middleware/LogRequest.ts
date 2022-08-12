@@ -1,5 +1,5 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import logger from '../../utils/Logger'
+import Logger from '@ioc:Adonis/Core/Logger'
 
 export default class LogRequest {
   public async handle({ request }: HttpContextContract, next: () => Promise<void>) {
@@ -12,7 +12,7 @@ export default class LogRequest {
     const data = `${request.method()} : ${request.url()} \n Headers => ${JSON.stringify(
       request.headers()
     )} \n Body => %o`
-    logger.info(data, request.body())
+    Logger.info(data, request.body())
 
     return await next()
   }
