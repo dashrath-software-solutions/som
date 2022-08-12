@@ -26,8 +26,8 @@
     "engineers"
   ],
   "engines": {
-    "node": "18.7.*",
-    "npm": "8.5.*"
+    "node": "18.7.0",
+    "npm": "8.15.0"
   },
   "icon": "https://cdn.iconscout.com/icon/premium/png-256-thumb/applicant-1874716-1591030.png",
   "release": {
@@ -117,6 +117,8 @@
   "dependencies": {
     "@adonisjs/core": "^5.8.6",
     "@adonisjs/repl": "^3.1.11",
+    "@slack/web-api": "^6.7.2",
+    "@slack/webhook": "^6.1.0",
     "proxy-addr": "^2.0.7",
     "source-map-support": "^0.5.21"
   }

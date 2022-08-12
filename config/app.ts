@@ -182,7 +182,8 @@ export const logger: LoggerConfig = {
   |
   */
   prettyPrint: Env.get('NODE_ENV') === 'development',
-  stream: writeFile(),
+  stream: Env.get('NODE_ENV') === 'development' ? undefined : writeFile(),
+  timestamp: 'epoch',
 }
 
 /*

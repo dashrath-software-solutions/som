@@ -18,10 +18,16 @@
 |
 */
 
+import './routes/v1/api/slack'
+
 import Route from '@ioc:Adonis/Core/Route'
-import logger from '../utils/Logger'
 
 Route.get('/', async () => {
-  logger.info('log')
-  return { hello: 'world' }
+  const date = new Date()
+  return {
+    date: date.toDateString(),
+    time: date.toTimeString(),
+    timezoneOffset: date.getTimezoneOffset(),
+    timezone: process.env.TZ,
+  }
 })
