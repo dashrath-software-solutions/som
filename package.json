@@ -26,8 +26,8 @@
     "engineers"
   ],
   "engines": {
-    "node": "18.7.0",
-    "npm": "8.15.0"
+    "node": "18.*",
+    "npm": "8.*"
   },
   "icon": "https://cdn.iconscout.com/icon/premium/png-256-thumb/applicant-1874716-1591030.png",
   "release": {
@@ -109,6 +109,7 @@
     "husky": "^8.0.1",
     "pino-pretty": "^9.0.0",
     "prettier": "^2.7.1",
+    "prisma": "^4.2.1",
     "reflect-metadata": "^0.1.13",
     "typescript": "~4.6",
     "youch": "^3.2.0",
@@ -117,6 +118,7 @@
   "dependencies": {
     "@adonisjs/core": "^5.8.6",
     "@adonisjs/repl": "^3.1.11",
+    "@prisma/client": "^4.2.1",
     "@slack/web-api": "^6.7.2",
     "@slack/webhook": "^6.1.0",
     "proxy-addr": "^2.0.7",

@@ -10,6 +10,7 @@ services:
     ports:
       - $PORT:$PORT
       - $DEBUG_PORT:$DEBUG_PORT
+      - 5555:5555
     volumes:
       - .:/app
       - /app/node_modules

@@ -2,8 +2,7 @@
   "typescript": true,
   "commands": [
     "./commands",
-    "@adonisjs/core/build/commands/index.js",
-    "@adonisjs/repl/build/commands"
+    "@adonisjs/core/build/commands/index.js"
   ],
   "exceptionHandlerNamespace": "App/Exceptions/Handler",
   "namespaces": {
@@ -12,7 +11,6 @@
   "aliases": {
     "App": "app",
     "Config": "config",
-    "Database": "database",
     "Contracts": "contracts"
   },
   "preloads": [

@@ -21,6 +21,7 @@
 import './routes/v1/api/slack'
 
 import Route from '@ioc:Adonis/Core/Route'
+import HealthCheck from '@ioc:Adonis/Core/HealthCheck'
 
 Route.get('/', async () => {
   const date = new Date()
@@ -30,4 +31,10 @@ Route.get('/', async () => {
     timezoneOffset: date.getTimezoneOffset(),
     timezone: process.env.TZ,
   }
+})
+
+Route.get('health', async ({ response }) => {
+  const report = await HealthCheck.getReport()
+
+  return report.healthy ? response.ok(report) : response.badRequest(report)
 })
