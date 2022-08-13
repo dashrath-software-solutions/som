@@ -25,8 +25,7 @@
     "types": [
       "@adonisjs/core",
       "@adonisjs/repl",
-      "@japa/preset-adonis/build/adonis-typings",
-      "@adonisjs/lucid"
+      "@japa/preset-adonis/build/adonis-typings"
     ]
   }
 }
