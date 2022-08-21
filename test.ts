@@ -25,7 +25,7 @@ const kernel = new Ignitor(__dirname).kernel('test')
 
 kernel
   .boot()
-  .then(() => import('./tests/bootstrap'))
+  .then(() => import('./.japa/bootstrap'))
   .then(({ runnerHooks, ...config }) => {
     const app: RunnerHooksHandler[] = [() => kernel.start()]
 

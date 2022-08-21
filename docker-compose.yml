@@ -8,9 +8,10 @@ services:
       args:
         - DEBUG_PORT=$DEBUG_PORT
     ports:
-      - $PORT:$PORT
-      - $DEBUG_PORT:$DEBUG_PORT
-      - 5555:5555
+      - $PORT:$PORT #app port
+      - 9229:7876 #node port
+      - 5555:5555 # prisma port
+      - 5434:9229 #jest debug port
     volumes:
       - .:/app
       - /app/node_modules
