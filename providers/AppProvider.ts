@@ -1,9 +1,13 @@
 import { ApplicationContract } from '@ioc:Adonis/Core/Application'
 import Logger from '@ioc:Adonis/Core/Logger'
+import { configure } from '../utils/Settings'
 import prisma from '../utils/Prisma'
 
 export default class AppProvider {
-  constructor(protected app: ApplicationContract) {}
+  protected set: typeof configure
+  constructor(protected app: ApplicationContract) {
+    this.set = configure
+  }
 
   public register() {
     // Register your own bindings
@@ -11,6 +15,7 @@ export default class AppProvider {
 
   public async boot() {
     // IoC container is ready
+    await this.set.fetchSettings()
   }
 
   public async ready() {

@@ -17,3 +17,12 @@ model SlackWebhooks {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model settings {
+  id        BigInt   @id @default(autoincrement())
+  key       String   @unique
+  value     String
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

@@ -32,6 +32,13 @@
           "tests/functional/**/*.spec(.ts|.js)"
         ],
         "timeout": 60000
+      },
+      {
+        "name": "settings",
+        "files": [
+          "tests/settings/**/*.spec(.ts|.js)"
+        ],
+        "timeout": 60000
       }
     ]
   },

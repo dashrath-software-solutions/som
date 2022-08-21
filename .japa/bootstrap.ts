@@ -8,6 +8,7 @@
 import type { Config } from '@japa/runner'
 import TestUtils from '@ioc:Adonis/Core/TestUtils'
 import { assert, runFailedTests, specReporter, apiClient } from '@japa/preset-adonis'
+import { PrismaClient } from '@prisma/client'
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +64,8 @@ export const runnerHooks: Required<Pick<Config, 'setup' | 'teardown'>> = {
 | the HTTP server when it is a functional suite.
 */
 export const configureSuite: Config['configureSuite'] = (suite) => {
+  const prisma = new PrismaClient()
+  prisma.$connect()
   if (suite.name === 'functional') {
     suite.setup(() => TestUtils.httpServer().start())
   }
