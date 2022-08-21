@@ -8,3 +8,4 @@ tmp
 **/migrations/*
 !**/migrations/migration_lock.toml
 /storybook
+.env.test

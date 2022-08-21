@@ -8,7 +8,9 @@ export default async (): Promise<Config.InitialOptions> => {
     verbose: true,
     moduleFileExtensions: ['ts', 'tsx', 'js'],
     testEnvironment: 'node',
-    testMatch: [path.resolve(__dirname, 'test/**/*.test.ts')],
+    testMatch: [
+      path.resolve(__dirname, 'test/**/**/**/**/**/**/**/**/**/**/**/**/**/**/**/*.test.ts'),
+    ],
     preset: 'ts-jest',
     transform: {
       '^.+\\.(t|j)s$': 'ts-jest',

@@ -14,12 +14,7 @@ export const logFilePath = (suffix = '') => {
 
   const absolutePath = path.resolve(abssolutePathFolder, fileName)
 
-  fs.appendFile(absolutePath, '', (err) => {
-    if (err) {
-      console.error(err.message, err)
-      process.exit(1)
-    }
-  })
+  fs.appendFile(absolutePath, '', () => null)
 
   return absolutePath
 }
@@ -42,14 +37,10 @@ export const PinoLogger = Pino(
   Pino.destination(writeFile('-global-1'))
 )
 
-const logger = new Logger(
-  {
-    name: 'sop',
-    level: 'trace',
-    enabled: false,
-    stream: writeFile('-global-2'),
-  },
-  PinoLogger
-)
+const logger = new Logger({
+  name: 'sop',
+  level: 'trace',
+  enabled: false,
+})
 
 export default logger

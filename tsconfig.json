@@ -1,5 +1,7 @@
 {
   "extends": "adonis-preset-ts/tsconfig.json",
+  "resolveJsonModule": true,
+  "esModuleInterop": true,
   "include": [
     "**/*"
   ],
