@@ -29,7 +29,7 @@
       {
         "name": "functional",
         "files": [
-          "tests/functional/**/*.spec(.ts|.js)"
+          ".japa/functional/**/*.spec(.ts|.js)"
         ],
         "timeout": 60000
       },

@@ -102,6 +102,7 @@ export interface TasksSpace {
 export interface TasksList {
   id: string
   custom_id: string
+  name: string
   text_content: string
   description: string
   status: TaskStatus
@@ -134,6 +135,5 @@ export interface TasksList {
 }
 
 export type ClickUpRequestSuccessFilteredTasksList = {
-  // tasks: TasksList[]
-  [key: string]: any
+  tasks: TasksList[]
 }

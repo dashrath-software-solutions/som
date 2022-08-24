@@ -9,3 +9,4 @@ tmp
 !**/migrations/migration_lock.toml
 /storybook
 .env.test
+start-lt.sh
