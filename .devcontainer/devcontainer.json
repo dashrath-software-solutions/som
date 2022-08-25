@@ -1,0 +1,14 @@
+{
+  "name": "dharmendra-slack",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "settings": {},
+  "extensions": ["dbaeumer.vscode-eslint", "ms-azuretools.vscode-docker"],
+  "forwardPorts": [5450],
+  // "postCreateCommand": ["pnpm", "start"],
+  "remoteUser": "node",
+  "features": {
+    "github-cli": "latest"
+  }
+}

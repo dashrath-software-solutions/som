@@ -1,0 +1,1 @@
+{"version":3,"file":"EventsController.js","sourceRoot":"","sources":["../../../../../app/Controllers/Http/Slack/EventsController.ts"],"names":[],"mappings":";;AAEA,MAAqB,gBAAgB;IAM5B,KAAK,CAAC,SAAS,CAAC,GAAwB;QAC7C,OAAO,GAAG,CAAC,OAAO,CAAC,IAAI,EAAE,CAAA;IAC3B,CAAC;CACF;AATD,mCASC"}

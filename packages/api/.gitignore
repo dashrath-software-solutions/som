@@ -1,0 +1,12 @@
+node_modules
+build
+coverage
+.DS_STORE
+.env
+tmp
+/.commit
+**/migrations/*
+!**/migrations/migration_lock.toml
+/storybook
+.env.test
+start-lt.sh
