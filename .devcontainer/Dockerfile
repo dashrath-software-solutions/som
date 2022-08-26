@@ -3,12 +3,6 @@ ARG VARIANT=18-bullseye
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-  && apt-get -y install --no-install-recommends nginx
+  && apt-get -y install --no-install-recommends nginx vim git libzip-dev unzip fzf software-properties-common
 
-COPY .nginx/site /etc/nginx/sites-available/default
-COPY .nginx/proxy_params /etc/nginx/proxy_params
-
-RUN su node -c "npm install -g pnpm" \
-  && sudo /etc/init.d/nginx restart
-
-
+RUN su node -c "npm install -g pnpm"

@@ -6,7 +6,8 @@
     "clean": "lerna clean --yes",
     "commit": "cz",
     "nx": "nx",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "start:nginx": "sudo .post-build/nginx.sh"
   },
   "author": {
     "email": "dharmendrashah2002@yahoo.com",

@@ -3,12 +3,26 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
   "workspaceFolder": "/workspace",
-  "settings": {},
-  "extensions": ["dbaeumer.vscode-eslint", "ms-azuretools.vscode-docker"],
+  "settings": {
+    "terminal.integrated.shellIntegration.enabled": true,
+    "editor.tabSize": 4
+  },
+  "onCreateCommand": ["yarn", "start:nginx"],
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "ms-azuretools.vscode-docker",
+    "timonwong.shellcheck",
+    "tyriar.sort-lines",
+    "davidanson.vscode-markdownlint",
+    "esbenp.prettier-vscode"
+  ],
   "forwardPorts": [5450],
-  // "postCreateCommand": ["pnpm", "start"],
   "remoteUser": "node",
   "features": {
-    "github-cli": "latest"
+    "github-cli": "latest",
+    "aws-cli": "latest",
+    "sshd": "latest",
+    "homebrew": "latest",
+    "python": "latest"
   }
 }
