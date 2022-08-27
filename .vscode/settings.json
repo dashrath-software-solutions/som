@@ -1,5 +1,5 @@
 {
-   "files.exclude": {
+  "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,
@@ -7,22 +7,26 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/.commit": true,
-    "**/node_modules": true,
+    "**/node_modules": false,
     "**/coverage": true,
-    "**/build": true
-   },
-    "prettier.enable": true,
-    "prettier.resolveGlobalModules": true,
-    "eslint.enable": true,
-    "eslint.validate": ["javascript"],
-    "eslint.format.enable": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "editor.snippetSuggestions": "top",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    "**/build": true,
+    "**/.husky": true,
+    "**/.devcontainer": false,
+    "**/.nginx": false,
+    "**/.post-build": false
+  },
+  "prettier.enable": true,
+  "prettier.resolveGlobalModules": true,
+  "eslint.enable": true,
+  "eslint.validate": ["javascript"],
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.snippetSuggestions": "top",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
+}

@@ -1,144 +1,43 @@
 {
-  "name": "som",
-  "description": "Slack operations manager",
-  "author": {
-    "email": "dharmendrashah2002@yahoo.com",
-    "name": "dharmendra soni",
-    "url": "https://github.com/dharmendrasha"
-  },
-  "license": "GPLv3",
-  "repository": {
-    "url": "https://github.com/dharmendrasha/SOM",
-    "type": "GIT",
-    "directory": "https://github.com/dharmendrasha/SOM"
-  },
-  "bugs": {
-    "email": "dharmendrashah2002@yahoo.com",
-    "url": "https://github.com/dharmendrasha/SOM/issues"
-  },
-  "homepage": "https://github.com/dharmendrasha/SOM",
-  "readme": "https://github.com/dharmendrasha/SOM#readme",
-  "keywords": [
-    "slack",
-    "bot",
-    "manager",
-    "operations",
-    "engineers"
-  ],
-  "engines": {
-    "node": "18.*",
-    "npm": "8.*"
-  },
-  "icon": "https://cdn.iconscout.com/icon/premium/png-256-thumb/applicant-1874716-1591030.png",
-  "release": {
-    "branches": [
-      "+([0-9])?(.{+([0-9]),x}).x",
-      "master",
-      "next",
-      "next-major",
-      {
-        "name": "beta",
-        "prerelease": true
-      },
-      {
-        "name": "alpha",
-        "prerelease": true
-      }
-    ],
-    "repositoryUrl": "https://github.com/dharmendrasha/SOM/releases"
-  },
-  "publisher": "dharmendrashah2002@yahoo.com",
-  "contributors": [
-    "dharmendrashah2002@yahoo.com"
-  ],
+  "name": "dharmendra-slack",
   "version": "1.0.0",
-  "private": true,
+  "description": "Slack Operation Manager. Production ready slack application for software engineers.",
+  "main": "index.js",
   "scripts": {
-    "dev": "node ace serve --watch",
-    "prebuild": "rimraf dist",
-    "debug": "node ace serve --watch --node-args='--inspect=0.0.0.0:7876'",
-    "test:cache:clear": "jest --clearCache",
-    "test:debug": "npm run test:cache:clear && node --inspect=0.0.0.0:9229 node_modules/.bin/jest --runInBand --watchAll --debug --verbose --colors --collectCoverage",
-    "build": "node ace build --production",
-    "test": "jest --colors --collectCoverage",
-    "start": "cd build && npm ci --production && node server.js",
-    "lint": "eslint . --ext=.ts",
-    "format": "prettier --write .",
-    "eslint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
-    "eslint:fix": "npm run eslint:check -- --fix",
-    "lint:all": "npm run eslint:check && npm run prettier:check",
-    "precommit": "lint-staged && npm run lint",
+    "clean": "lerna clean -y",
+    "commit": "cz",
+    "bootstrap": "lerna bootstrap --hoist",
     "prepare": "husky install",
-    "prettier:check": "prettier --check ./**/*.{ts,js,json,*rc}",
-    "prettier:write": "prettier --write ./**/*.{ts,js,json,*rc}",
-    "sort-package-json": "npx sort-package-json"
+    "start:nginx": "sudo .post-build/nginx.sh"
   },
-  "eslintConfig": {
-    "extends": [
-      "plugin:adonis/typescriptApp",
-      "prettier"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error"
-      ]
-    }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dharmendrasha/som.git"
   },
-  "eslintIgnore": [
-    "build"
+  "keywords": [
+    "automation",
+    "slack",
+    "chatbot",
+    "management"
   ],
-  "prettier": {
-    "trailingComma": "es5",
-    "semi": false,
-    "singleQuote": true,
-    "useTabs": false,
-    "quoteProps": "consistent",
-    "bracketSpacing": true,
-    "arrowParens": "always",
-    "printWidth": 100
+  "author": "dharmendrashah2002@yahoo.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dharmendrasha/som/issues"
   },
+  "homepage": "https://github.com/dharmendrasha/som#readme",
   "devDependencies": {
-    "@adonisjs/assembler": "^5.8.1",
-    "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
-    "@babel/preset-typescript": "^7.18.6",
-    "@japa/preset-adonis": "^1.1.0",
-    "@japa/runner": "^2.0.9",
-    "@types/jest": "^28.1.7",
-    "adonis-preset-ts": "^2.1.0",
-    "babel-jest": "^28.1.3",
-    "eslint": "^8.21.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-adonis": "^2.1.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.1",
-    "jest": "^28.1.3",
-    "jest-mock-extended": "^2.0.7",
-    "pino-pretty": "^9.0.0",
-    "prettier": "^2.7.1",
-    "prisma": "^4.2.1",
-    "reflect-metadata": "^0.1.13",
-    "ts-jest": "^28.0.8",
-    "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.1.0",
-    "typescript": "~4.6",
-    "youch": "^3.2.0",
-    "youch-terminal": "^2.1.4"
+    "lerna": "^5.4.3"
   },
-  "dependencies": {
-    "@adonisjs/core": "^5.8.6",
-    "@adonisjs/repl": "^3.1.11",
-    "@prisma/client": "^4.2.1",
-    "@slack/web-api": "^6.7.2",
-    "@slack/webhook": "^6.1.0",
-    "adonis-websocket": "^1.0.4",
-    "axios": "^0.27.2",
-    "dotenv": "^16.0.1",
-    "moment": "^2.29.4",
-    "proxy-addr": "^2.0.7",
-    "source-map-support": "^0.5.21"
+  "workspaces": [
+    "packages/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

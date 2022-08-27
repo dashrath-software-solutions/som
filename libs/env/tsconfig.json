@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node"]
+  },
+  "references": [
+    {
+      "path": "../logger/tsconfig.json"
+    }
+  ],
+}

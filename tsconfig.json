@@ -1,35 +1,10 @@
 {
-  "extends": "adonis-preset-ts/tsconfig.json",
-  "resolveJsonModule": true,
-  "esModuleInterop": true,
-  "include": [
-    "**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "test"
-  ],
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "build",
-    "rootDir": "./",
-    "sourceMap": true,
-    "paths": {
-      "App/*": [
-        "./app/*"
-      ],
-      "Config/*": [
-        "./config/*"
-      ],
-      "Contracts/*": [
-        "./contracts/*"
-      ],
-    },
-    "types": [
-      "@adonisjs/core",
-      "@adonisjs/repl",
-      "@japa/preset-adonis/build/adonis-typings",
-      "@types/jest"
-    ]
-  }
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "composite": true,
+    "paths": {}
+  },
+  "types": ["node", "mocha", "chai", "sinon", "cypress", "jest"]
 }

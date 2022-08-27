@@ -1,0 +1,42 @@
+{
+  "name": "dharmendra-slack",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shellIntegration.enabled": true,
+    "editor.tabSize": 4
+  },
+  "onCreateCommand": ["yarn", "start:nginx"],
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "ms-azuretools.vscode-docker",
+    "timonwong.shellcheck",
+    "tyriar.sort-lines",
+    "davidanson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "christian-kohler.path-intellisense",
+    "prisma.prisma",
+    "waderyan.gitblame",
+    "mhutchie.git-graph",
+    "codezombiech.gitignor",
+    "orta.vscode-jest",
+    "firsttris.vscode-jest-runner",
+    "folke.vscode-monorepo-workspace",
+    "idered.npm",
+    "mikestead.dotenv",
+    "hediet.vscode-drawio",
+    "william-voyek.vscode-nginx",
+    "jakebathman.nginx-log-highlighter",
+    "wwm.better-align",
+    "christian-kohler.path-intellisense"
+  ],
+  "forwardPorts": [5450, 4211],
+  "features": {
+    "github-cli": "latest",
+    "aws-cli": "latest",
+    "sshd": "latest",
+    "python": "latest"
+  }
+}
