@@ -67,8 +67,6 @@
     "eslint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
     "eslint:fix": "npm run eslint:check -- --fix",
     "lint:all": "npm run eslint:check && npm run prettier:check",
-    "precommit": "lint-staged && npm run lint",
-    "prepare": "husky install",
     "prettier:check": "prettier --check ./**/*.{ts,js,json,*rc}",
     "prettier:write": "prettier --write ./**/*.{ts,js,json,*rc}",
     "sort-package-json": "npx sort-package-json"

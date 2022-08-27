@@ -2,7 +2,10 @@
 ARG VARIANT=18-bullseye
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-  && apt-get -y install --no-install-recommends nginx vim git libzip-dev unzip fzf software-properties-common
-
-RUN su node -c "npm install -g pnpm"
+RUN apt-get update \
+  && export DEBIAN_FRONTEND=noninteractive \
+  && export TZ=Asia/Kolkata \
+  && apt-get -y install --no-install-recommends nginx vim git libzip-dev unzip fzf software-properties-common \
+  && apt-get install -y openssl \
+  && apt-get -y install tzdata \
+  && su node -c "npm install -g pnpm"

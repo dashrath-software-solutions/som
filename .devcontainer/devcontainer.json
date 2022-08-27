@@ -14,7 +14,22 @@
     "timonwong.shellcheck",
     "tyriar.sort-lines",
     "davidanson.vscode-markdownlint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "christian-kohler.path-intellisense",
+    "prisma.prisma",
+    "waderyan.gitblame",
+    "mhutchie.git-graph",
+    "codezombiech.gitignor",
+    "orta.vscode-jest",
+    "firsttris.vscode-jest-runner",
+    "folke.vscode-monorepo-workspace",
+    "idered.npm",
+    "mikestead.dotenv",
+    "hediet.vscode-drawio",
+    "william-voyek.vscode-nginx",
+    "jakebathman.nginx-log-highlighter",
+    "wwm.better-align"
   ],
   "forwardPorts": [5450],
   "remoteUser": "node",
@@ -22,7 +37,6 @@
     "github-cli": "latest",
     "aws-cli": "latest",
     "sshd": "latest",
-    "homebrew": "latest",
     "python": "latest"
   }
 }

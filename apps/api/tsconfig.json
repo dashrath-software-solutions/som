@@ -2,28 +2,16 @@
   "extends": "adonis-preset-ts/tsconfig.json",
   "resolveJsonModule": true,
   "esModuleInterop": true,
-  "include": [
-    "**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "test"
-  ],
+  "include": ["**/*"],
+  "exclude": ["node_modules", "build", "test"],
   "compilerOptions": {
     "outDir": "build",
     "rootDir": "./",
     "sourceMap": true,
     "paths": {
-      "App/*": [
-        "./app/*"
-      ],
-      "Config/*": [
-        "./config/*"
-      ],
-      "Contracts/*": [
-        "./contracts/*"
-      ],
+      "App/*": ["./app/*"],
+      "Config/*": ["./config/*"],
+      "Contracts/*": ["./contracts/*"]
     },
     "types": [
       "@adonisjs/core",
