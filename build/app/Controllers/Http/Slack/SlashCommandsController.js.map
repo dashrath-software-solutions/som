@@ -1,1 +1,0 @@
-{"version":3,"file":"SlashCommandsController.js","sourceRoot":"","sources":["../../../../../app/Controllers/Http/Slack/SlashCommandsController.ts"],"names":[],"mappings":";;AAEA,MAAqB,uBAAuB;IAOnC,KAAK,CAAC,IAAI,CAAC,GAAwB;QACxC,OAAO,GAAG,CAAC,OAAO,CAAC,IAAI,EAAE,CAAA;IAC3B,CAAC;CACF;AAVD,0CAUC"}

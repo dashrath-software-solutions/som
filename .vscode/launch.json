@@ -17,20 +17,20 @@
         "${workspaceFolder}/node_modules/**/*.js",
         "<node_internals>/**/*.js"
       ]
-  },
-  {
-    "name": "Jest Docker: Attach to jest",
-    "type": "node",
-    "request": "attach",
-    "port": 5434,
-    "address": "localhost",
-    "localRoot": "${workspaceFolder}",
-    "remoteRoot": "/app",
-    "envFile": "${workspaceFolder}/.env",
-    "skipFiles": [
-      "${workspaceFolder}/node_modules/**/*.js",
-      "<node_internals>/**/*.js"
-    ]
-},
+    },
+    {
+      "name": "Jest Docker: Attach to jest",
+      "type": "node",
+      "request": "attach",
+      "port": 5434,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "/app",
+      "envFile": "${workspaceFolder}/.env",
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+        "<node_internals>/**/*.js"
+      ]
+    }
   ]
 }

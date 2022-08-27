@@ -31,8 +31,7 @@
     "jakebathman.nginx-log-highlighter",
     "wwm.better-align"
   ],
-  "forwardPorts": [5450],
-  "remoteUser": "node",
+  "forwardPorts": [5450, 4211],
   "features": {
     "github-cli": "latest",
     "aws-cli": "latest",
