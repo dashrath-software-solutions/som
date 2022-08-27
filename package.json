@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "lerna clean -y",
+    "commit": "cz",
     "bootstrap": "lerna bootstrap --hoist",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start:nginx": "sudo .post-build/nginx.sh"
   },
   "repository": {
     "type": "git",
@@ -23,11 +25,6 @@
   "bugs": {
     "url": "https://github.com/dharmendrasha/som/issues"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "homepage": "https://github.com/dharmendrasha/som#readme",
   "devDependencies": {
     "commitizen": "^4.2.5",
@@ -37,5 +34,10 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

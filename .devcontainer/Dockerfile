@@ -7,4 +7,5 @@ RUN apt-get update \
   && export TZ=Asia/Kolkata \
   && apt-get -y install --no-install-recommends nginx vim git libzip-dev unzip fzf software-properties-common \
   && apt-get install -y openssl \
-  && apt-get -y install tzdata
+  && apt-get -y install tzdata \
+  && npm i -g @nestjs/cli

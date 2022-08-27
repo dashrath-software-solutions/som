@@ -8,5 +8,4 @@ cd .nginx &&
     sudo nginx -t &&
     sudo /etc/init.d/nginx restart &&
     sudo /etc/init.d/nginx status &&
-    sudo corepack enable &&
-    pnpm install
+    sudo corepack enable

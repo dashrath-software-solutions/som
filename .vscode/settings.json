@@ -9,7 +9,11 @@
     "**/.commit": true,
     "**/node_modules": false,
     "**/coverage": true,
-    "**/build": true
+    "**/build": true,
+    "**/.husky": true,
+    "**/.devcontainer": false,
+    "**/.nginx": false,
+    "**/.post-build": false
   },
   "prettier.enable": true,
   "prettier.resolveGlobalModules": true,

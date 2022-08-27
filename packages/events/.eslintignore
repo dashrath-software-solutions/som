@@ -1,7 +1,0 @@
-.vscode
-build
-dist
-node_modules
-Dockerfile
-babel.config.js
-**/test/**

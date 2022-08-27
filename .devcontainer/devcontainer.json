@@ -29,7 +29,8 @@
     "hediet.vscode-drawio",
     "william-voyek.vscode-nginx",
     "jakebathman.nginx-log-highlighter",
-    "wwm.better-align"
+    "wwm.better-align",
+    "christian-kohler.path-intellisense"
   ],
   "forwardPorts": [5450, 4211],
   "features": {
