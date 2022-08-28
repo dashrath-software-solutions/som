@@ -5,13 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Docker: Attach to Node",
+      "name": "Bolt: Attach to Node",
       "type": "node",
       "request": "attach",
       "port": 9229,
       "address": "localhost",
-      "localRoot": "${workspaceFolder}",
-      "remoteRoot": "/app",
+      "localRoot": "${workspaceFolder}/packages/bolt",
+      "remoteRoot": "/workspace/packages/bolt",
       "envFile": "${workspaceFolder}/.env",
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",

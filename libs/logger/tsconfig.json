@@ -1,7 +1,16 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "module": "CommonJS",
     "composite": true,
-    "types": ["node"]
-  }
+    "esModuleInterop": true,
+    "types": [
+      "node"
+    ]
+  },
+  "references": [
+    {
+      "path": "../env/tsconfig.json"
+    }
+  ]
 }

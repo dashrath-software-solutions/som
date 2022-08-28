@@ -8,14 +8,25 @@
     "rootDir": "./src",
     "baseUrl": "./src",
     "strict": true,
-    "types": ["node", "jest"],
+    "types": [
+      "node",
+      "jest"
+    ],
     "composite": true,
     "declaration": true,
     "declarationMap": true,
-    "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "../../node_modules/@types",
+      "../../node_modules/@slack"
+    ],
     "paths": {
-      "@env/*": ["../../libs/env/*"],
-      "@logger/*": ["../../libs/logger/*"]
+      "@env/*": [
+        "../../libs/env/*"
+      ],
+      "@logger/*": [
+        "../../libs/logger/*"
+      ]
     }
   },
   "references": [
@@ -26,6 +37,10 @@
       "path": "../../libs/logger/tsconfig.json"
     }
   ],
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules/**"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules/**"
+  ]
 }

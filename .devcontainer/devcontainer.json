@@ -5,9 +5,29 @@
   "workspaceFolder": "/workspace",
   "settings": {
     "terminal.integrated.shellIntegration.enabled": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "prettier.enable": true,
+    "prettier.resolveGlobalModules": true,
+    "nxConsole.enableTelemetry": false,
+    "eslint.enable": true,
+    "eslint.validate": [
+      "javascript"
+    ],
+    "search.showLineNumbers": true,
+    "eslint.format.enable": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true,
+    "editor.snippetSuggestions": "top",
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
   },
-  "onCreateCommand": ["yarn", "start:nginx"],
+  "onCreateCommand": [
+    "yarn",
+    "start:nginx"
+  ],
   "extensions": [
     "dbaeumer.vscode-eslint",
     "ms-azuretools.vscode-docker",
@@ -30,9 +50,13 @@
     "william-voyek.vscode-nginx",
     "jakebathman.nginx-log-highlighter",
     "wwm.better-align",
-    "christian-kohler.path-intellisense"
+    "christian-kohler.path-intellisense",
+    "nrwl.angular-console"
   ],
-  "forwardPorts": [5450, 4211],
+  "forwardPorts": [
+    5450,
+    4211
+  ],
   "features": {
     "github-cli": "latest",
     "aws-cli": "latest",

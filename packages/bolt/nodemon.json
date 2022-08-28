@@ -1,0 +1,11 @@
+{
+  "execMap": {
+    "ts": "ts-node"
+  },
+  "watch": [
+    "src"
+  ],
+  "ext": ".ts,.js",
+  "ignore": [],
+  "exec": "node --inspect -r ts-node/register ./src/index.ts"
+}

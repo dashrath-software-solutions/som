@@ -8,7 +8,8 @@
     "commit": "cz",
     "bootstrap": "lerna bootstrap --hoist",
     "prepare": "husky install",
-    "start:nginx": "sudo .post-build/nginx.sh"
+    "start:nginx": "sudo .post-build/nginx.sh",
+    "start:bolt": "lerna run start:dev --scope=bolt"
   },
   "repository": {
     "type": "git",

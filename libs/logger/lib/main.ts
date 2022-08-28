@@ -3,7 +3,7 @@ import { yellow } from '@nestjs/common/utils/cli-colors.util'
 import * as fs from 'fs'
 import * as path from 'path'
 
-class CustomLogger extends ConsoleLogger {
+export class CustomLogger extends ConsoleLogger {
   private _shouldWriteToTheFile = false
   private _pathToWrite: string = __dirname
   private _fileName = () => this.setCurrentDate()
@@ -95,5 +95,5 @@ class CustomLogger extends ConsoleLogger {
 
 const logger = new CustomLogger('App')
 logger.pathToWrite = path.resolve(__dirname, '..', '..', '..', 'logs')
-
+logger.shouldWriteToThePath = false
 export { logger }

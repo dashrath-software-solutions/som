@@ -17,8 +17,12 @@
   },
   "prettier.enable": true,
   "prettier.resolveGlobalModules": true,
+  "nxConsole.enableTelemetry": false,
   "eslint.enable": true,
-  "eslint.validate": ["javascript"],
+  "eslint.validate": [
+    "javascript"
+  ],
+  "search.showLineNumbers": true,
   "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
