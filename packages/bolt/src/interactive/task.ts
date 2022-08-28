@@ -50,10 +50,17 @@ export const taskSubmit = {
     return async (
       body: SlackActionMiddlewareArgs['body'],
       client: WebClient,
+      payload: SlackActionMiddlewareArgs['payload'],
+      say: SlackActionMiddlewareArgs['say'],
+      respond: SlackActionMiddlewareArgs['respond'],
       ack: any,
     ) => {
       await ack();
-      console.log('one time only', body);
+      const pld: any = payload;
+
+      await respond(
+        `Thanks for submitting your task. \n Have a nice evening <@${pld.user.id}>. \n :smirk:`,
+      );
     };
   },
 };

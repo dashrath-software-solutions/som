@@ -17,19 +17,28 @@ const app = new App({
   port: parseInt(serverPort),
 });
 
-app.use(async ({ body, client, ack, next }) => {
+app.use(async (list) => {
   if (
-    body.type === 'dialog_submission' &&
-    body.callback_id === taskSubmit.message
+    list.body.type === 'dialog_submission' &&
+    list.body.callback_id === taskSubmit.message
   ) {
+    console.log(list);
     const handle = taskSubmit.handler();
-    await handle(body, client, ack);
+    const listing: any = list;
+    await handle(
+      list.body,
+      list.client,
+      listing.payload,
+      listing.say,
+      listing.respond,
+      list.ack,
+    );
     return;
   }
 
-  console.log('middleware', body);
+  console.log('middleware', list.body);
 
-  return await next();
+  return await list.next();
 });
 
 async function noBotMessages({ message, next }) {
@@ -59,10 +68,5 @@ app.command(Task.message, async (list) => {
   const handle = Task.handler();
   await handle(list.body, list.client, list.ack);
 });
-
-// app.action(workingHourAction.message, async (list) => {
-//   const handle = workingHourAction.handler();
-//   await handle(list.body, list.client, list.ack);
-// });
 
 export default app;
